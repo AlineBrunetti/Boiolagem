@@ -1,12 +1,242 @@
-# Documentação do Projeto
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-Bem-vindo à documentação do projeto!
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128140</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
 
-## 🗂 Estrutura
-- `/docs` – Diretório com a documentação.
-- `/assets` – Arquivos estáticos (CSS, JS, imagens).
+    <style>
+        body {
+            background-color: rgb(136, 10, 10);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-family: 'Parisienne', cursive; /* Aplicando a fonte Parisienne */
+            font-size: 30px;
+        }
 
-## 🛠️ Como Usar
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/AlineBrunetti/Boiolagem.git
+        span {
+            font-size: 30px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: lightgray;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            max-height: 400px; /* Defina a altura máxima */
+            overflow-y: auto; /* Ativa a barra de rolagem vertical */
+        }
+
+        .popup h2 {
+            color: rgb(136, 10, 10);
+            font-size: 24px; /* Tamanho do título */
+        }
+
+        .popup p {
+            font-size: 24px; /* Tamanho da fonte dos parágrafos */
+            color: #333;
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .popup button {
+            margin: 10px;
+            padding: 10px 15px;
+            font-size: 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botao-sim {
+            background-color: rgb(136, 10, 10);
+            color: white;
+        }
+
+        .botao-nao {
+            background-color: lightgray;
+            color: black;
+        }
+
+        .botao-sim:hover {
+            background-color: rgb(180, 20, 20);
+        }
+
+        .botao-nao:hover {
+            background-color: darkgray;
+        }
+
+        .popup-custom {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .popup-custom h3 {
+            margin: 0;
+            color: rgb(136, 10, 10);
+        }
+
+        .popup-custom p {
+            color: black;
+        }
+
+        .popup-custom button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgb(136, 10, 10);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-custom button:hover {
+            background-color: rgb(180, 20, 20);
+        }
+
+        .assinatura {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 22px; /* Ajuste o tamanho conforme necessário */
+            font-style: italic;
+            color: white;
+        }
+
+        .corpo {
+            font-family: 'Notable', cursive;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="inicio" class="inicio">
+
+        <h1>João Arthur Brautigam</h1>
+        <span>&#128149;&#128158; Eu te <span class="corpo">AMOOO</span> &#128158;&#128149;</span>
+          
+        <p>Venho por meio desse, oficializar o meu convite (comunicado). &#128158;</p>
+        <p>Você esta sendo convidado à iniciar os planos para nossa vida juntos. Aceita?</p>
+        <button onclick="mostrarPopup()">Ler Termos :)</button>
+
+        <div id="popup" class="popup">
+            <p>Termos de Amor e Compromisso</p>
+
+            <p>Bem-vindo, Arthur, ao contrato oficial do nosso amor! Antes de continuar, leia atentamente os Termos de Amor e Devoção.</p>
+                
+            <p>Ao aceitar este compromisso, você concorda com os seguintes termos:</p>
+                
+            <p>📌 Uso do Amor</p>
+                
+            <p> Este relacionamento deve ser usado apenas para fins de carinho, cumplicidade e felicidade.</p>
+            <p> Qualquer uso indevido, como falta de abraços ou atraso nos beijos diários, pode resultar em punições fofas (cócegas inclusas).</p>
+            <p> 📌Coleta e Uso de Sentimentos</p>
+                
+            <p> Coletamos e armazenamos grandes quantidades de amor, saudade e admiração.</p>
+            <p> Esses sentimentos serão utilizados exclusivamente para te mimar e te fazer feliz.</p>
+            <p> 📌Responsabilidades do Arthur</p>
+                
+            <p> Ser o namorado mais incrível do mundo (o que, sinceramente, você já faz muito bem).</p>
+            <p> Aceitar abraços e beijos a qualquer momento, sem aviso prévio.</p>
+            <p> Manter o coração sempre aberto para muito amor e planos incríveis juntos.</p>
+            <p> 📌Alterações nos Termos</p>
+                
+            <p> Podemos adicionar cláusulas a qualquer momento, como mais viagens, mais surpresas e mais momentos especiais.</p>
+            <p> O uso contínuo desse amor significa que você aceita todas as novas condições, sem direito a devoluções (pois sou sua pra sempre 💖).</p>
+            <p> Ao clicar em "Aceito", você confirma que me ama muito, está pronto para nossa vida juntos e que esse contrato é eterno!</p>
+            <button onclick="escolha('vendeu')">Sim, aceito vender minha alma &#128141&#128140&#128584.</button>
+            <button onclick="escolha('negou')">Eu escolho a opção acima &#128100&#128584. </button>
+        </div>
+    </div>
+
+    <div id="pos" class="pos" style="display: none;">
+        <h1>João Arthur Brautigam</h1>
+        <span>&#128149;&#128158; Eu te <span class="corpo">AMOOO</span> &#128158;&#128149;</span>
+        <p>&#128149&#128158 Obrigada pela sua colaboração!! &#128158&#128149;</p>
+        <span>&#128149&#128158 Amo Você mais que tudo nesse mundo <span class=corpo>LINDÃO</span> &#128158&#128149;</span>
+        <p>&#128525&#128536&#129392</p>
+    
+        <div class="assinatura">
+            Princesinha do João Arthur Brautigam - Pavão&#129434
+        </div>
+    </div>
+    
+    <!-- Alerta Customizado -->
+    <div id="popup-custom" class="popup-custom">
+        <h3>Arthur</h3>
+        <p>Contrato firmado! Boa sorte! 😈</p>
+        <button onclick="fecharAlerta()">Fechar</button>
+    </div>
+
+    <script>
+        function mostrarPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function escolha(opcao) {
+            // Fecha o popup dos termos
+            document.getElementById("popup").style.display = "none";
+            
+            // Exibir o popup customizado após a escolha
+            document.getElementById("popup-custom").style.display = "block";
+            
+            // Exibir mensagem com base na escolha
+            let mensagem = (opcao === 'vendeu') ? "Contrato firmado! Boa sorte! 😈" : "Sábia escolha... Contrato firmado! Boa sorte! 😈";
+            document.querySelector("#popup-custom p").textContent = mensagem;
+        }
+
+        function fecharAlerta() {
+            // Fechar o alerta customizado
+            document.getElementById("popup-custom").style.display = "none";
+
+            // Fechar também o primeiro popup (inicio)
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("pos").style.display = "block";
+        }
+    </script>
+</body>
+</html>
